@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run
@@ -11,7 +9,7 @@ To start the application:
 
 ### Transaction data
 
-In the **transactionData folder**, stored as a simple JavaScript object.
+In the **transactionData folder**, stored as an array, containing simple JavaScript objects.
 
 ### Functionality for calculating rewards points
 

@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { calculateMonthlyTotal } from "../helpers/helpers";
 import { v4 as uuidv4 } from "uuid";
-import Month from "../Month/Month";
 import { transactionData } from "../transactionData/transactionData";
 import "./RewardPointsBoard.css";
+import Customer from "../Customer/Customer";
 
 const RewardPointsBoard = () => {
   const [data, setData] = useState(null);
@@ -21,19 +20,9 @@ const RewardPointsBoard = () => {
   if (loading) return <h1>Loading...</h1>;
   return (
     <div className="RewardPointsBoard">
-      <h1>Your reward points</h1>
-      {data.map((i) => {
-        const monthlyTotal = calculateMonthlyTotal(i.transactions);
-        total += monthlyTotal;
-        return (
-          <Month
-            key={uuidv4()}
-            name={i.month}
-            points={calculateMonthlyTotal(i.transactions)}
-          />
-        );
+      {data.map((entry) => {
+        return <Customer key={uuidv4()} info={entry} />;
       })}
-      <div className="RewardPointsBoard-total">Total Points - {total}</div>
     </div>
   );
 };
