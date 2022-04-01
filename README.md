@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To install, in the terminal:
 ### `npm install`
 To start the application:
-### `npm run`
+### `npm start`
 
 ### Transaction data
 
